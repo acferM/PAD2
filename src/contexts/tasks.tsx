@@ -78,10 +78,11 @@ function TasksProvider({ children }: TasksProviderProps): JSX.Element {
   );
 
   const removeTask = useCallback(
-    (id: number) => {
+    async (id: number) => {
       const filteredTasks = tasks.filter(task => task.id !== id);
 
       setTasks(filteredTasks);
+      await AsyncStorage.setItem('@PAD::tasks', JSON.stringify(filteredTasks));
     },
     [tasks],
   );

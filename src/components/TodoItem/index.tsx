@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/core';
 import { Container, Header, Title, Content } from './styles';
 
 import barsImg from '../../assets/bars.png';
@@ -21,8 +21,8 @@ export function TodoItem({
   const navigation = useNavigation();
 
   const HandleNavigateToDetails = useCallback(() => {
-    navigation.navigate({ id }, 'Details');
-  }, [navigation]);
+    navigation.navigate('Details', { id });
+  }, [navigation, id]);
 
   return (
     <Container>

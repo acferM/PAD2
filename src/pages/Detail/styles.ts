@@ -26,10 +26,37 @@ export const HeaderTitle = styled.Text`
   font-weight: bold;
 `;
 
-export const TaskContainer = styled.View``;
+export const TaskContainer = styled.View`
+  width: 100%;
+  background: white;
+  margin-top: 46px;
+  border-radius: 10px;
+  height: 370px;
+`;
 
-export const TaskTitle = styled.Text``;
+export const TaskTitle = styled.Text`
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+`;
 
-export const TaskContent = styled.Text``;
+export const TaskContent = styled.Text`
+  margin-top: 8px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+`;
 
-export const Button = styled(RectButton)<ButtonProps>``;
+export const Button = styled(RectButton)<ButtonProps>`
+  margin-top: 14px;
+  background: ${props => (props.color === 'purple' ? '#6200EE' : '#EB3223')};
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+`;
+
+export const ButtonText = styled.Text`
+  color: #fff;
+  font-size: 18px;
+`;
